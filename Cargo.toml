@@ -5,12 +5,14 @@ authors = ["Andreas Longva <andreas.b.longva@gmail.com>"]
 edition = "2018"
 
 [features]
+tbb = [ "mkl-sys/tbb" ]
 ilp64 = [ "mkl-sys/ilp64" ]
 openmp = [ "mkl-sys/openmp" ]
 
 [dependencies.mkl-sys]
-git = "https://github.com/Andlon/mkl-sys"
-rev = "c197c97319f0784caae26012968c9c7bd76d494b"
+#git = "https://github.com/elrnv/mkl-sys"
+path = "../mkl-sys"
+#rev = "c197c97319f0784caae26012968c9c7bd76d494b"
 features = [ "dss", "inspector-executor" ]
 
 [dev-dependencies]
